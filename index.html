@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio di Vincenzo Ferrara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    /* Effetto Glassmorphism per le card */
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+
+
+<body class="bg-gradient-to-r from-purple-900 to-indigo-900 text-white font-sans">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo: Nome e Foto Profilo -->
+      <div class="flex items-center space-x-4">
+        <div class="text-2xl font-bold">Vincenzo Ferrara</div>
+      </div>
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-gray-300">Home</a>
+        <a href="#about" class="hover:text-gray-300">Chi Sono</a>
+        <a href="#projects" class="hover:text-gray-300">Progetti</a>
+        <a href="#contact" class="hover:text-gray-300">Contatti</a>
+      </div>
+      <!-- Toggle Menu Telefono -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Per il Telefono -->
+    <div id="mobile-menu" class="md:hidden hidden px-4">
+      <a href="#home" class="block py-2 border-b border-gray-700">Home</a>
+      <a href="#about" class="block py-2 border-b border-gray-700">Chi Sono</a>
+      <a href="#projects" class="block py-2 border-b border-gray-700">Progetti</a>
+      <a href="#contact" class="block py-2">Contatti</a>
+    </div>
+  </nav>
+  
+ <!-- macchina da scrivere -->
+<section  id="home" class="min-h-screen flex items-center relative">
+  
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
+   
+    <div class="md:w-1/2 text-center md:text-left">
+      <h1 class="text-4xl md:text-6xl font-bold">
+        <span id="typed-name"></span>
+      </h1>
+      <p class="mt-4 text-xl md:text-2xl">
+        <span id="typed-role"></span>
+      </p>
+      <a href="#projects" class="mt-8 inline-block bg-white text-black py-3 px-6 rounded-full font-semibold transition hover:bg-gray-200">
+        Scopri i miei progetti
+      </a>
+    </div>
+    <!-- Immagine di Presentazione -->
+    <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+      <img src="/Prove/immagini/icone-d-ordinateur-violet.png" alt="Immagine di Presentazione" class="w-full max-w-md animate__animated animate__fadeInRight">
+    </div>
+  </div>
+</section>
+
+<!-- Typed.js - Effetto macchina da scrivere -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  // Effetto macchina da scrivere per il nome
+  var typedName = new Typed("#typed-name", {
+    strings: ["Vincenzo Ferrara", "Benvenuto nel mio Portfolio"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 2000,
+    loop: true
+  });
+
+  // Effetto macchina da scrivere per il ruolo
+  var typedRole = new Typed("#typed-role", {
+    strings: ["Sviluppatore Web", "Software Specialist"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 2000,
+    loop: true
+  });
+</script>
+
+
+  
+  
+  <!-- Sezione Chi Sono -->
+  <section id="about" class="py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8 animate__animated animate__fadeInDown">Chi Sono</h2>
+      <p class="text-lg text-center leading-relaxed animate__animated animate__fadeInUp">
+        Sono un Giovane informatico appassionato, specializzato nello sviluppo web e nelle soluzioni IT. <br>Con un occhio attento al design e alla funzionalità, team working e tanta determinazione.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Sezione Esperienze Lavorative -->
+  <section id="experience" class="py-20 bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 animate__animated animate__fadeInDown">Esperienze Lavorative</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Esperienza 1 -->
+        <div class="glass p-6 rounded-lg shadow-lg transition transform hover:scale-105 animate__animated animate__fadeInUp">
+          <h3 class="text-2xl font-bold text-purple-300 mb-2">SOFTWARE SPECIALIST</h3>
+          <p class="text-sm text-gray-300 mb-1">WeBinar - HealthCare Solutions</p>
+          <p class="text-sm text-gray-300 mb-3">2024/2025 - Presente</p>
+          <p class="text-gray-300">Specialista applicativo in ambito Medicale inerente alla gestione di software come PACS archiviazione di immagini e software per la stampa di cartelline sanitarie, gestione del cloud e generazione di report, gestione del database e supporto nella gestione in ambito di configurazione ed implementazione software, Supporto al servizio di Application Management</p>
+        </div>
+        <!-- Esperienza 2 -->
+        <div class="glass p-6 rounded-lg shadow-lg transition transform hover:scale-105 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+          <h3 class="text-2xl font-bold text-purple-300 mb-2">IMPIEGATO AZIENDALE</h3>
+          <p class="text-sm text-gray-300 mb-1">Azienda di Intimo e Biancheria - Città Dell’Intimo</p>
+          <p class="text-sm text-gray-300 mb-3">2023</p>
+          <p class="text-gray-300">Gestione Del Magazzino Tramite Software Aziendali <br>
+            Prenotazioni e Chiamate Per i Prodotti Con i Fornitori <br>
+            Caricamento Dei Prodotti Sul Sito Aziendale e Monitoraggio Dei Prezzi <br>
+           Gestione social e Web Site</p>
+        </div>
+        <!-- Esperienza 3 -->
+        <div class="glass p-6 rounded-lg shadow-lg transition transform hover:scale-105 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+          <h3 class="text-2xl font-bold text-purple-300 mb-2">TECNICO INFORMATICO</h3>
+          <p class="text-sm text-gray-300 mb-1">Attività Privata</p>
+          <p class="text-sm text-gray-300 mb-3">2022</p>
+          <p class="text-gray-300">Pulizia PC <br>
+            Configurazioni di PC per Uffici e da Gaming - CPU -GPU - RAM-ETC <br>
+             Installazione Software </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sezione Competenze -->
+  <section id="skills" class="py-20 bg-gradient-to-r from-indigo-900 to-purple-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Competenze</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+        <!-- Skill Card 1 -->
+        <div class="glass p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105 skill-card" style="opacity: 0;">
+          <img src="https://img.icons8.com/color/64/linux--v1.png" alt="Linux" class="mb-3">
+          <span class="text-lg font-semibold">LINUX</span>
+        </div>
+        <!-- Skill Card 2 -->
+        <div class="glass p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105 skill-card" style="opacity: 0;">
+          <img src="https://img.icons8.com/color/64/html-5--v1.png" alt="HTML" class="mb-3">
+          <span class="text-lg font-semibold">HTML</span>
+        </div>
+        <!-- Skill Card 3 -->
+        <div class="glass p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105 skill-card" style="opacity: 0;">
+          <img src="https://img.icons8.com/color/64/css3.png" alt="CSS" class="mb-3">
+          <span class="text-lg font-semibold">CSS</span>
+        </div>
+        <!-- Skill Card 4 -->
+        <div class="glass p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105 skill-card" style="opacity: 0;">
+          <img src="https://img.icons8.com/color/64/javascript--v1.png" alt="JavaScript" class="mb-3">
+          <span class="text-lg font-semibold">JAVASCRIPT</span>
+        </div>
+        <!-- Skill Card 5 -->
+        <div class="glass p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105 skill-card" style="opacity: 0;">
+          <img src="https://img.icons8.com/color/64/java-coffee-cup-logo--v1.png" alt="Java" class="mb-3">
+          <span class="text-lg font-semibold">JAVA</span>
+        </div>
+        <!-- Skill Card 6 -->
+        <div class="glass p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105 skill-card" style="opacity: 0;">
+          <img src="https://img.icons8.com/color/64/mysql-logo.png" alt="MySQL" class="mb-3">
+          <span class="text-lg font-semibold">MYSQL</span>
+        </div>
+        <!-- Skill Card 7 -->
+        <div class="glass p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105 skill-card" style="opacity: 0;">
+          <img src="https://img.icons8.com/fluency/64/processor.png" alt="Hardware" class="mb-3">
+          <span class="text-lg font-semibold">HARDWARE</span>
+        </div>
+        <!-- Skill Card 8 -->
+        <div class="glass p-6 rounded-lg shadow-lg flex flex-col items-center transition transform hover:scale-105 skill-card" style="opacity: 0;">
+          <img src="https://img.icons8.com/color/64/bootstrap--v2.png" alt="Bootstrap" class="mb-3">
+          <span class="text-lg font-semibold">BOOTSTRAP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- addVent -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const skillsSection = document.getElementById('skills');
+      const skillCards = document.querySelectorAll('.skill-card');
+      
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Aggiunge le classi animate a ciascuna card con un delay incrementale
+            skillCards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('animate__animated', 'animate__fadeInUp');
+                card.style.opacity = 1;
+              }, index * 100);
+            });
+            observer.unobserve(skillsSection);
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      observer.observe(skillsSection);
+    });
+  </script>
+  
+  <!-- Sezione Progetti -->
+  <section id="projects" class="py-20 bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 animate__animated animate__fadeInDown">Progetti</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="glass p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp">
+          <h3 class="text-2xl font-bold mb-4"><img src="/Prove/immagini/a-purple-progress-bar_2245219.png!bw700" alt=""></h3>
+          <p class="mb-4">In Corso..</p>
+          <a href="#" class="text-purple-300 hover:text-purple-500 font-semibold">Visualizza dettagli</a>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="glass p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+          <h3 class="text-2xl font-bold mb-4"><img src="/Prove/immagini/anime.PNG" alt=""></h3>
+          <p class="mb-4">Descrizione breve del progetto, le tecnologie utilizzate e l'impatto realizzato.</p>
+          <a href="https://jungkook02.github.io/SitoStreamingAnime/" class="text-purple-300 hover:text-purple-500 font-semibold">Visualizza dettagli</a>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="glass p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+          <h3 class="text-2xl font-bold mb-4"><img src="/Prove/immagini/a-purple-progress-bar_2245219.png!bw700" alt=""></h3>
+          <p class="mb-4">In Corso..</p>
+          <a href="#" class="text-purple-300 hover:text-purple-500 font-semibold">Visualizza dettagli</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sezione Contatti -->
+  <section id="contact" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-8 animate__animated animate__fadeInDown">Contattami</h2>
+      <p class="mb-4 animate__animated animate__fadeInUp">
+        Sono sempre disponibile per nuove sfide e collaborazioni. Scrivimi per maggiori informazioni o per collaborare insieme.
+      </p>
+      <a href="mailto:tuo@email.com" class="inline-block bg-purple-600 text-white py-3 px-6 rounded-full font-semibold transition hover:bg-purple-700 animate__animated animate__fadeInUp">Invia Email</a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-gray-500">&copy; 2025 Vincenzo Ferrara. Tutti i diritti riservati.</p>
+      <p class="text-gray-500"> vincenzo.ferraratoro@gmail.com</p>
+      <p class="text-gray-500"> Via Atellana 155 Aversa CE</p>
+    </div>
+  </footer>
+  
+  <!-- Script per il Toggle del Menu Mobile -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+
+
+
+</body>
+</html>
